@@ -1,0 +1,15 @@
+export const skills = [
+    {name: "Javascript"},
+    {name: "React Js"},
+    {name: "Redux"},
+    {name: "Typescript"},
+    {name: "Node Js"},
+    {name: "Express Js"},
+    {name: "Python"},
+    {name: "Mongoose"},
+    {name: "MongoDB"},
+    {name: "Firebase"},
+    {name: "Css/Sass"},
+    {name: "Html"},
+    {name: "Jquery"},
+]

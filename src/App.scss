@@ -1,0 +1,60 @@
+@import "animate.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+$primary-color: #ffd700;
+$secondary-color: #011824;
+$background-color-secondary: #fff;
+$box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+$text-color-white: #fff;
+$font-family-inter: 'Inter', sans-serif;
+
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family-inter;
+}
+.font-intel{
+  font-family: $font-family-inter;
+}
+.white-mode{
+  color: #011824;
+  background-color: #fff;
+  text-decoration: none;
+}
+.dark-mode{
+  color: #fff;
+  background-color: #011824;
+  text-decoration: none;
+}
+.app{
+  min-width: 100%;
+}
+.container{
+  padding: 8rem 5rem 0;
+  border: 2px solid red;
+  width: 100vw;
+  height: 100vh;
+}
+.App{
+  height: auto;
+  background-color: $secondary-color;
+  padding: 4rem 1rem 0;
+  align-items: center;
+  overflow: hidden;
+}
+.navbarComponent{
+  top: 0;
+  border: 2px solid #fff;
+}
+
+@media (min-width: 992px){
+.container, .container-lg, .container-md, .container-sm {
+  max-width: none;
+}}
