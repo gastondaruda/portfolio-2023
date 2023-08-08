@@ -2,6 +2,8 @@ import {useContext, useEffect, useState} from "react"
 import {Container,Row, Col, Button} from 'react-bootstrap/'
 import "./about.scss"
 import { skills } from "./skills"
+import { collection, getDocs, query } from "firebase/firestore";
+import { db } from "../../services/config";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SiMongodb } from "react-icons/si";
 import {
@@ -17,6 +19,22 @@ import { DarkModeContext } from "../../context/DarkMode"
 
 function About(){
     const {darkMode} = useContext(DarkModeContext)
+    const [studies, setStudies] = useState([])
+
+    useEffect(() => {
+        const studios = collection(db, "studies")
+
+        getDocs(studios)
+            .then(res => {
+                const nuevosProductos = res.docs.map(doc => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data }
+                })
+                setStudies(nuevosProductos);}
+            )
+            .catch(error => console.log(error))
+
+    }, [])
 
     return(
         <>
@@ -38,6 +56,24 @@ function About(){
                     </div>
                 </Col>
             </Row>
+            <Row>
+                <Col className="d-flex justify-content-center">
+                    <h3>Studies</h3>
+                </Col>
+            </Row>
+                {
+                    studies.map((studie) =>(
+                        <Row key={studie.id} className="mb-4 mt-4">
+                            <Col>
+                                <img src={studie.img} alt={studie.name} className="about-img"/>
+                            </Col>
+                            <Col className="d-flex flex-column justify-content-center">
+                                <h4>{studie.name}</h4>
+                                <span>{studie.date}</span>
+                            </Col>
+                        </Row>
+                    ))
+                }
         </Container>
         </>
     )

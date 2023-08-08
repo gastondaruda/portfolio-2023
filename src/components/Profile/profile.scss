@@ -1,3 +1,24 @@
+.profile-title{
+    font-weight: bolder;
+    font-size: 4.5rem;
+    //background: url("https://www.in2code.de/fileadmin/_processed_/0/b/csm_code_javascript_49d002a67e.webp");
+    //-webkit-background-clip: text;
+    //background-clip: text;
+    //color: transparent;
+}
+.profile-subtitle{
+    font-size: 3.5;
+    font-weight: 700;
+    opacity: 0.8;
+}
+.profile-text{
+    font-size: 2.5;
+    font-weight: 500;
+    opacity: 0.6;
+}
+.profile-icon{
+    font-size: 3rem;
+}
 .img{
     width: 22rem;
     height: auto;

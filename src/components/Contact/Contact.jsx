@@ -2,10 +2,12 @@ import {useEffect, useState, useRef, useContext} from "react"
 import {Container, Row, Col} from 'react-bootstrap';
 import emailjs from "@emailjs/browser"
 import "./contact.scss"
+import Map from 'react-map-gl';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import Swal from 'sweetalert2'
 import SpinnerComponent from "../Loading/Loading";
 import { DarkModeContext } from "../../context/DarkMode";
+import SimpleMap from "../Map/Map";
 
 
 function Contact(){
@@ -51,7 +53,7 @@ const position = [-34.66599597553595, -58.5315886980697]
         <Container className={darkMode ? "dark-mode container" : "white-mode container"}>
             <Row>
                 <Col className="d-flex justify-content-center align-items-center">
-                    <h3>Hired me...</h3>
+                    <h3>Hire me...</h3>
                 </Col>
             </Row>
             <Row>
@@ -89,9 +91,6 @@ const position = [-34.66599597553595, -58.5315886980697]
                             </li>
                         </ul>
                     </form>
-                </Col>
-                <Col className="d-flex justify-content-center align-items-center">
-                    mapa
                 </Col>
             </Row>
         </Container>

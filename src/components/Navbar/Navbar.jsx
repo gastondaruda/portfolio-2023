@@ -42,8 +42,8 @@ function NavbarComponent() {
                             <NavLink to="about" className={darkMode ? "dark-mode" : "white-mode"}>
                                 About
                             </NavLink>
-                            <NavLink to="/mywork" className={darkMode ? "dark-mode" : "white-mode"}>
-                                My Work
+                            <NavLink to="/portfolio" className={darkMode ? "dark-mode" : "white-mode"}>
+                                portfolio
                             </NavLink>
                             <NavLink to="contact" className={darkMode ? "dark-mode" : "white-mode"}>
                                 Contact

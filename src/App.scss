@@ -3,25 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 $primary-color: #ffd700;
 $secondary-color: #011824;
 $background-color-secondary: #fff;
 $box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 $text-color-white: #fff;
-$font-family-inter: 'Inter', sans-serif;
+$font-family: 'Josefin Sans', sans-serif;
 
-
-
-
+.border{
+  border: 2px solid red;
+}
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: $font-family-inter;
+  font-family: $font-family;
 }
-.font-intel{
-  font-family: $font-family-inter;
+a{
+  text-decoration: none;
 }
 .white-mode{
   color: #011824;
@@ -30,7 +31,7 @@ $font-family-inter: 'Inter', sans-serif;
 }
 .dark-mode{
   color: #fff;
-  background-color: #011824;
+  background-color: rgb(15 23 42);
   text-decoration: none;
 }
 .app{
@@ -40,7 +41,8 @@ $font-family-inter: 'Inter', sans-serif;
   padding: 8rem 5rem 0;
   border: 2px solid red;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 .App{
   height: auto;
