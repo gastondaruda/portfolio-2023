@@ -16,7 +16,7 @@ function NavbarComponent() {
     return (
     <>
         {['lg'].map((expand) => (
-        <Navbar collapseOnSelect key={expand} expand={expand} className="navbar d-flex align-items-center position-fixed w-100">
+        <Navbar collapseOnSelect key={expand} expand={expand} className={darkMode ? "navbar navbar-bg-dark d-flex align-items-center position-fixed w-100" : "navbar navbar-bg-white d-flex align-items-center position-fixed w-100"}>
             <Container fluid className={darkMode ? "dark-mode" : "white-mode"}>
                 {/*<Navbar.Brand href="#" className="d-flex align-items-center navbar-title">
                     <FaReact className="color-react"/>Gastón Da Ruda - Frontend Developer

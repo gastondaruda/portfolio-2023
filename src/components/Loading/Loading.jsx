@@ -1,9 +1,14 @@
-import Spinner from 'react-bootstrap/Spinner';
+import {Container, Row, Col, Spinner} from 'react-bootstrap/';
 import "./loading.scss"
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/DarkMode';
 
 function SpinnerComponent(){
+    const {darkMode} = useContext(DarkModeContext)
     return(
-        <Spinner animation="border" variant="primary" />
+        <div className={darkMode ? "dark-mode spinner" : "white-mode spinner"}>
+            <Spinner animation="border" variant="primary" className="spinner-spinner"/>
+        </div>
     )
 }
 

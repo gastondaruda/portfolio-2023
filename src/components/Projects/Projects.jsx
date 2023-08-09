@@ -8,7 +8,7 @@ import { DarkModeContext } from "../../context/DarkMode";
 
 function Projects() {
     const [pro, setProd] = useState([]);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const {darkMode} = useContext(DarkModeContext)
 
     useEffect(() => {

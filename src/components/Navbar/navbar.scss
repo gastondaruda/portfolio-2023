@@ -1,5 +1,14 @@
 .navbar{
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.6);
+    padding: 0!important;
+    height: 3rem;
+    z-index: 10;
+}
+.navbar-bg-white{
+    background-color: #fff!important;
+}
+.navbar-bg-dark{
+    background-color: #011824!important;
 }
 .btn-close{
     position: absolute;

@@ -15,11 +15,13 @@ import {
     faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import { DarkModeContext } from "../../context/DarkMode"
+import SpinnerComponent from "../Loading/Loading";
 
 
 function About(){
     const {darkMode} = useContext(DarkModeContext)
     const [studies, setStudies] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const studios = collection(db, "studies")
@@ -30,7 +32,9 @@ function About(){
                     const data = doc.data()
                     return { id: doc.id, ...data }
                 })
-                setStudies(nuevosProductos);}
+                setStudies(nuevosProductos);
+                setLoading(false)
+            }
             )
             .catch(error => console.log(error))
 
@@ -38,7 +42,8 @@ function About(){
 
     return(
         <>
-        <Container className={darkMode ? "dark-mode container" : "white-mode container"}>
+        {loading && <SpinnerComponent />}
+        {!loading && <Container className={darkMode ? "dark-mode container" : "white-mode container"}>
             <Row>
                 <Col>
                     <h4>About me</h4>
@@ -62,19 +67,19 @@ function About(){
                 </Col>
             </Row>
                 {
-                    studies.map((studie) =>(
-                        <Row key={studie.id} className="mb-4 mt-4">
+                    studies.sort(function(a, b){return b.orden - a.orden}).map((studie) =>(
+                        <Row key={studie.id} className="about-study_container mb-4 mt-4">
                             <Col>
                                 <img src={studie.img} alt={studie.name} className="about-img"/>
                             </Col>
                             <Col className="d-flex flex-column justify-content-center">
-                                <h4>{studie.name}</h4>
-                                <span>{studie.date}</span>
+                                <h4 className="about-study_name">{studie.name}</h4>
+                                <span className="about-study_date">{studie.date}</span>
                             </Col>
                         </Row>
                     ))
                 }
-        </Container>
+        </Container>}
         </>
     )
 }
