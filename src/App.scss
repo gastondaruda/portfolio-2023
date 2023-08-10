@@ -22,7 +22,8 @@ $font-family: 'Josefin Sans', sans-serif;
   font-family: $font-family;
 }
 a{
-  text-decoration: none;
+  text-decoration: none!important;
+  color: #fff;
 }
 .white-mode{
   color: #011824;
@@ -30,7 +31,7 @@ a{
   text-decoration: none;
 }
 .dark-mode{
-  color: #fff;
+  color: #eee;
   background-color: rgb(15 23 42);
   text-decoration: none;
 }
@@ -39,7 +40,6 @@ a{
 }
 .container{
   padding: 8rem 5rem 0;
-  border: 2px solid red;
   width: 100vw;
   min-height: 100vh;
   height: auto;

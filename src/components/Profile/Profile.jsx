@@ -15,7 +15,7 @@ function Profile(){
         <Container fluid className={darkMode ? "dark-mode container" : "white-mode container"}>
         <Row className="d-flex justify-content-around align-items-center">
             <Col className="d-flex justify-content-center align-items-center flex-column">
-                <h1>Hi, my name is</h1>
+                <h1 className="profile-title">Hi, my name is</h1>
                 <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
                     <h2 className="profile-title">Gastón Da Ruda</h2>
                 </Animated>

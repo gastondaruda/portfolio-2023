@@ -2,6 +2,7 @@
     border-radius: 36px;
     padding: 3rem 2rem;
     transition: .3s;
+    width: 100%;
     &:hover{
         //background-color: #eeeeeecb;
         //backdrop-filter: blur(8px);
@@ -34,4 +35,27 @@
 }
 .btn-skill:hover{
     text-shadow: 0 0 30px #fff;
+}
+
+@media (max-width: 768px) {
+    .about-title{
+        font-size: 1.5rem;
+        margin: 1rem auto;
+    }
+    .about-text{
+        font-size: .8rem;
+    }
+    .about-btn{
+        width: 1rem;
+    }
+    .about-study_container{
+        padding: 0;
+        width: 100vw;
+        .about-img{
+            width: 15rem;
+        }
+        .about-study_name, .about-study_date{
+            font-size: .9rem;
+        }
+    }
 }
