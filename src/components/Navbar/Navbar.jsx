@@ -26,28 +26,35 @@ function NavbarComponent() {
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                 placement="end"
-                bg="dark"
-                variant="dark"
+                className={darkMode ? "dark-mode" : "white-mode"}
                 >
                 <Offcanvas.Header closeButton className='color-primary'>
-                    <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className="color-primary navbar-title">
+                    <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} className="navbar-title">
                     Gastón Da Ruda - Frontend Developer
                     </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <Nav className={`justify-content-evenly align-items-center flex-grow-1 pe-3 nav-item`}>
-                            <NavLink to="/" className={darkMode ? "dark-mode" : "white-mode"}>
-                                Home
-                            </NavLink>
-                            <NavLink to="about" className={darkMode ? "dark-mode" : "white-mode"}>
-                                About
-                            </NavLink>
-                            <NavLink to="/portfolio" className={darkMode ? "dark-mode" : "white-mode"}>
-                                portfolio
-                            </NavLink>
-                            <NavLink to="contact" className={darkMode ? "dark-mode" : "white-mode"}>
-                                Contact
-                            </NavLink>
+                            <Nav.Link href="/">
+                                <NavLink to="/" className={darkMode ? "dark-mode" : "white-mode"}>
+                                    Home
+                                </NavLink>
+                            </Nav.Link>
+                            <Nav.Link href="/">
+                                <NavLink to="about" className={darkMode ? "dark-mode" : "white-mode"}>
+                                    About
+                                </NavLink>
+                            </Nav.Link>
+                            <Nav.Link href="/">
+                                <NavLink to="/portfolio" className={darkMode ? "dark-mode" : "white-mode"}>
+                                    portfolio
+                                </NavLink>
+                            </Nav.Link>
+                            <Nav.Link href="/">
+                                <NavLink to="contact" className={darkMode ? "dark-mode" : "white-mode"}>
+                                    Contact
+                                </NavLink>
+                            </Nav.Link>
                             <Switch onClick={handleClick}/>
                     </Nav>
                 </Offcanvas.Body>

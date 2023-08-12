@@ -21,11 +21,15 @@
 
 
 @media (max-width: 768px) {
+    a{
+        font-size: 2rem
+    }
     .navbar-nav{
         align-items: center!important;
+        height: 100vh;
     }
     .navbar-title{
-        font-size: .8rem!important;
+        font-size: .9rem!important;
     }
     .navbar-toggler-icon{
         width: 1rem;

@@ -29,7 +29,7 @@ function Profile(){
                         <BsLinkedin className="profile-icon"/>
                     </a>
                 </div>
-                <Button href={resume}variant={darkMode ? "outline-info" :"info"}>Resume</Button>{' '}
+                <Button href={resume}variant={darkMode ? "outline-info" :"info"} className="mb-3">Resume</Button>{' '}
             </Col>
             <Col className="d-flex justify-content-center align-items-center flex-column">
                 <LazyLoadImage src={profile}

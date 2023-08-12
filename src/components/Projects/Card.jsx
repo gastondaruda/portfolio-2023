@@ -20,10 +20,10 @@ export default function Card({project}) {
                     <h4 className="card-title">{name}</h4>
                     <p className="card-description">{description}</p>
                     <div>
-                        <Button variant={darkMode ? "outline-info" :"info"} className="mt-3 mb-2">
+                        <Button variant={darkMode ? "outline-info" :"info"} className="mt-3 mb-2 btn">
                             <a href={gitpages_url} target="_blank" rel="noreferrer">Project</a>
                         </Button>
-                        <Button variant={darkMode ? "outline-info" :"info"} className="mt-3 mb-2">
+                        <Button variant={darkMode ? "outline-info" :"info"} className="mt-3 mb-2 btn">
                             <a href={git_url} target="_blank" rel="noreferrer">Repository</a>
                         </Button>
                     </div>

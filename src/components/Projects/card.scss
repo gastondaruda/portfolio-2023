@@ -18,3 +18,18 @@
 a{
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .project-image{
+        width: 19rem;
+        height: 12rem;
+    }
+    .card-title{
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+    .card-description{
+        margin-top: 1rem;
+        font-size: .9rem;
+    }
+}

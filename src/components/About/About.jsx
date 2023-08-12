@@ -68,11 +68,11 @@ function About(){
                         </Row>
                             {
                                 studies.sort(function(a, b){return b.orden - a.orden}).map((studie) =>(
-                                    <Row key={studie.id} className="about-study_container mb-4 mt-4">
-                                        <Col>
+                                    <Row key={studie.id} className="about-study mb-4 mt-4 border">
+                                        <Col md={6} className="d-flex flex-column justify-content-center align-items-center mt-2">
                                             <img src={studie.img} alt={studie.name} className="about-img"/>
                                         </Col>
-                                        <Col className="d-flex flex-column justify-content-center">
+                                        <Col md={6} className="d-flex flex-column justify-content-center align-items-center mt-2">
                                             <h4 className="about-study_name">{studie.name}</h4>
                                             <span className="about-study_date">{studie.date}</span>
                                         </Col>

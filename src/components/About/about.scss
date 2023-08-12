@@ -51,8 +51,14 @@
     .about-study_container{
         padding: 0;
         width: 100vw;
+    }
+    .about-study{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .about-img{
-            width: 15rem;
+            width: 13rem;
         }
         .about-study_name, .about-study_date{
             font-size: .9rem;
