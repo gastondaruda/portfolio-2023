@@ -2,6 +2,7 @@ import {Button, Container, Row, Col} from 'react-bootstrap/'
 import './card.scss'
 import { DarkModeContext } from '../../context/DarkMode'
 import { useContext } from 'react'
+import { motion } from "framer-motion"
 
 
 export default function Card({project}) {
@@ -12,12 +13,14 @@ export default function Card({project}) {
         <Container fluid className={darkMode ? "dark-mode container" : "white-mode container"}>
             <Row>
                 <Col className="d-flex justify-content-center align-items-center">
-                    <a href={gitpages_url} target="_blank" rel="noreferrer">
-                        <img src={img} className="project-image"/>
-                    </a>
+                    <motion.div animate={{ x: 0 }} initial={{x: -700}} transition={{duration:1}}>
+                        <a href={gitpages_url} target="_blank" rel="noreferrer">
+                            <img src={img} className="project-image"/>
+                        </a>
+                    </motion.div>
                 </Col>
                 <Col className="d-flex justify-content-center align-items-center flex-column">
-                    <h4 className="card-title">{name}</h4>
+                <motion.div animate={{ x: 0 }} initial={{x: 700}} transition={{duration:1}}>                    <h4 className="card-title">{name}</h4>
                     <p className="card-description">{description}</p>
                     <div>
                         <Button variant={darkMode ? "outline-info" :"info"} className="mt-3 mb-2 btn">
@@ -32,6 +35,7 @@ export default function Card({project}) {
                             tools?.map((tool) => <Button variant={darkMode ? "outline-warning" :"warning"}>{tool}</Button>)
                         }
                     </div>
+                    </motion.div>
                 </Col>
             </Row>
         </Container>
