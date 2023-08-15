@@ -15,8 +15,21 @@
     left: 0;
 }
 .nav-item{
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 1rem;
+    font-weight: bold;
+    .nav-items-dark{
+        &:hover{
+            color: #fff;
+            text-shadow: 0 0 30px #fff;
+        }
+    }
+    .nav-items-white{
+        &:hover{
+            color: #011824;
+            text-shadow: 0 0 30px #011824;
+        }
+    }
 }
 
 

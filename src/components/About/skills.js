@@ -1,3 +1,13 @@
+import { SiMongodb } from "react-icons/si";
+import {
+    faSass,
+    faCss3,
+    faGitAlt,
+    faHtml5,
+    faJsSquare,
+    faReact,
+} from '@fortawesome/free-brands-svg-icons'
+
 export const skills = [
     {name: "Javascript"},
     {name: "React Js"},
@@ -12,4 +22,10 @@ export const skills = [
     {name: "Css/Sass"},
     {name: "Html"},
     {name: "Jquery"},
+]
+
+export const skillsIcons = [
+    faJsSquare,
+    faReact,
+
 ]

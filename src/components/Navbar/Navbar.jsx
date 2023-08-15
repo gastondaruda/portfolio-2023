@@ -35,23 +35,23 @@ function NavbarComponent() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <Nav className={`justify-content-evenly align-items-center flex-grow-1 pe-3 nav-item`}>
-                            <Nav.Link href="/">
-                                <NavLink to="/" className={darkMode ? "dark-mode" : "white-mode"}>
+                            <Nav.Link href="/" >
+                                <NavLink to="/" className={darkMode ? "dark-mode nav-items-dark" : "white-mode nav-items-white"}>
                                     Home
                                 </NavLink>
                             </Nav.Link>
                             <Nav.Link href="/">
-                                <NavLink to="about" className={darkMode ? "dark-mode" : "white-mode"}>
-                                    About
+                                <NavLink to="/experience" className={darkMode ? "dark-mode nav-items-dark" : "white-mode nav-items-white"}>
+                                    experience
                                 </NavLink>
                             </Nav.Link>
                             <Nav.Link href="/">
-                                <NavLink to="/portfolio" className={darkMode ? "dark-mode" : "white-mode"}>
-                                    portfolio
+                                <NavLink to="about" className={darkMode ? "dark-mode nav-items-dark" : "white-mode nav-items-white"}>
+                                    About Me
                                 </NavLink>
                             </Nav.Link>
                             <Nav.Link href="/">
-                                <NavLink to="contact" className={darkMode ? "dark-mode" : "white-mode"}>
+                                <NavLink to="contact" className={darkMode ? "dark-mode nav-items-dark" : "white-mode nav-items-white"}>
                                     Contact
                                 </NavLink>
                             </Nav.Link>

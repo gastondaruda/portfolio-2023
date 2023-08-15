@@ -1,13 +1,21 @@
+@import url("../../App.scss");
+
+.profile-t{
+    font-size: 3.5rem;
+}
 .profile-title{
     font-weight: bolder;
-    font-size: 4.5rem;
+    font-size: 3rem;
     //background: url("https://www.in2code.de/fileadmin/_processed_/0/b/csm_code_javascript_49d002a67e.webp");
     //-webkit-background-clip: text;
     //background-clip: text;
     //color: transparent;
 }
+.color-secondary{
+    color: #0367d3;
+}
 .profile-subtitle{
-    font-size: 3.5;
+    font-size: 2.7;
     font-weight: 700;
     opacity: 0.8;
 }
@@ -17,17 +25,23 @@
     opacity: 0.6;
 }
 .profile-icon{
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: #000;
     opacity: .7;
+    margin: 0 .5rem 0 1.5rem;
 }
 .img{
-    width: 22rem;
+    width: 28rem;
     height: auto;
-    border-radius: 26px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.8);
+    background-color: #0367d3;
+    border-radius: 50%;
 }
-
+.btn-contact{
+    border-radius: 36px!important;
+    width: 10rem!important;
+    padding: .9rem 0!important;
+    height: auto!important;
+}
 @media (max-width: 768px) {
     .profile-title{
         font-size: 1.7rem;
